@@ -2,7 +2,11 @@ import React from 'react'
 
 const Product = (props) => {
     return (
-        <span>{props.name}</span>
+        <div className="my-3">
+            <span className="h4">
+                {props.name}
+            </span>
+        </div>
     )
 }
 
