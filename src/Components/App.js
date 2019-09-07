@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import ProductList from './ProductList'
+import AddProductForm from './AddProductForm'
 
 class App extends Component {
     state = {
@@ -28,6 +29,7 @@ class App extends Component {
             <div className="container border mt-5">
                 <Header />
                 <ProductList products={this.state.products} />
+                <AddProductForm />
             </div>
         )
     }
