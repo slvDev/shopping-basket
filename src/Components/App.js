@@ -7,15 +7,18 @@ class App extends Component {
         products: [
             {
                 name: "Potato",
-                count: 2
+                count: 2,
+                price: 2
             },
             {
                 name: "Pasts",
-                count: 4
+                count: 4,
+                price: 4
             },
             {
                 name: "Bananas",
-                count: 1
+                count: 1,
+                price: 8
             }
         ]
     }

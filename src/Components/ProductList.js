@@ -7,6 +7,8 @@ const ProductList = (props) => {
             {props.products.map( p => 
                 <Product 
                     name={p.name}
+                    count={p.count}
+                    price={p.price}
                 />
             )}
         </React.Fragment>
