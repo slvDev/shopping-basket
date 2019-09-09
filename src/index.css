@@ -17,3 +17,7 @@ code {
       max-width: 600px;
   }
 }
+
+.space-right {
+  margin-right: 0px;
+}
