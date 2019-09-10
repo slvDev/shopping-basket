@@ -4,12 +4,14 @@ import Product from './Product'
 const ProductList = (props) => {
     return(
         <React.Fragment>
-            {props.products.map( p => 
+            {props.products.map( (product, index) => 
                 <Product 
-                    name={p.name}
-                    count={p.count}
-                    price={p.price}
-                    key={p.id.toString()}
+                    key={product.id.toString()}
+                    name={product.name}
+                    count={product.count}
+                    price={product.price}
+                    id={product.id}
+                    deleteProduct={props.deleteProduct}
                 />
             )}
         </React.Fragment>

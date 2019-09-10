@@ -54,11 +54,23 @@ class App extends Component {
         })
     }
 
+    handleDeleteProduct = (id) => {
+        console.log(id)
+        this.setState( prevState => {
+            return {
+                products: prevState.products.filter( p => p.id !== id)
+            }
+        })
+    }
+
     render() {
         return (
             <div className="container mt-5">
                 <Header />
-                <ProductList products={this.state.products} />
+                <ProductList 
+                    products={this.state.products}
+                    deleteProduct={this.handleDeleteProduct}
+                />
                 <Footer />
                 <AddProductForm 
                     addProduct={this.handleAddProduct}
