@@ -52,7 +52,7 @@ class App extends Component {
                     products={this.state.products}
                     deleteProduct={this.handleDeleteProduct}
                 />
-                <Footer />
+                <Footer products={this.state.products} />
                 <AddProductForm 
                     addProduct={this.handleAddProduct}
                     clearBasket={this.handleClearBasket}
