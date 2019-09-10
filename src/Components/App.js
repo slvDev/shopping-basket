@@ -27,7 +27,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="container border mt-5">
+            <div className="container mt-5">
                 <Header />
                 <ProductList products={this.state.products} />
                 <Footer />
