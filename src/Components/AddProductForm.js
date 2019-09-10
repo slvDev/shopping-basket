@@ -20,7 +20,7 @@ const AddProductForm = (props) => {
                 <input type="text" ref={productInput} className="form-control" placeholder="Product Title" aria-describedby="button-addon2" />  
             </div>
             <div className="col-2">
-                <input type="text" ref={countInput} className="form-control" placeholder="Count" aria-describedby="button-addon2" />
+                <input type="text" ref={countInput} className="form-control" placeholder="Amount" aria-describedby="button-addon2" />
             </div>
             <div className="col-2 mb-2">
                 <input type="text" ref={priceInput} className="form-control" placeholder="Price" aria-describedby="button-addon2" />

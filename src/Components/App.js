@@ -6,29 +6,10 @@ import Footer from './Footer'
 
 class App extends Component {
     state = {
-        products: [
-            {
-                name: "Potato",
-                count: 2,
-                price: 2,
-                id: 1
-            },
-            {
-                name: "Pasts",
-                count: 4,
-                price: 4,
-                id: 2
-            },
-            {
-                name: "Bananas",
-                count: 1,
-                price: 8,
-                id: 3
-            }
-        ]
+        products: []
     }
 
-    prevProductId = 3
+    prevProductId = 0
 
     handleAddProduct = (name, count, price) => {
         this.setState( prevState => {
