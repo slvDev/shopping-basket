@@ -57,6 +57,7 @@ class App extends Component {
                     addProduct={this.handleAddProduct}
                     clearBasket={this.handleClearBasket}
                 />
+                {console.log(this.state.products)}
             </div>
         )
     }
