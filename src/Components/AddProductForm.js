@@ -7,8 +7,8 @@ const AddProductForm = (props) => {
 
     const handleAddProduct = () => {
         props.addProduct(productInput.current.value,
-                        countInput.current.value,
-                        priceInput.current.value)
+                        isNaN(countInput.current.value) ? 1 : countInput.current.value,
+                        isNaN(priceInput.current.value) ? 1 : priceInput.current.value)
         productInput.current.value = null
         countInput.current.value = null
         priceInput.current.value = null

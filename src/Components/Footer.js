@@ -2,7 +2,8 @@ import React from 'react'
 
 const Footer = (props) => {
     let totalPrice = props.products.reduce( (total, product) => {
-        return total + product.count * product.price
+        let count = Number(product.count) ? product.count : 1
+        return total + count * product.price
     }, 0)
 
     return (
