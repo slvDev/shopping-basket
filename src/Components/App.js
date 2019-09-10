@@ -46,13 +46,24 @@ class App extends Component {
         })
     }
 
+    handleClearBasket = () => {
+        this.setState( () => {
+            return {
+                products: []
+            }
+        })
+    }
+
     render() {
         return (
             <div className="container mt-5">
                 <Header />
                 <ProductList products={this.state.products} />
                 <Footer />
-                <AddProductForm addProduct={this.handleAddProduct}/>
+                <AddProductForm 
+                    addProduct={this.handleAddProduct}
+                    clearBasket={this.handleClearBasket}
+                />
             </div>
         )
     }
