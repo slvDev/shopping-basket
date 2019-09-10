@@ -10,19 +10,40 @@ class App extends Component {
             {
                 name: "Potato",
                 count: 2,
-                price: 2
+                price: 2,
+                id: 1
             },
             {
                 name: "Pasts",
                 count: 4,
-                price: 4
+                price: 4,
+                id: 2
             },
             {
                 name: "Bananas",
                 count: 1,
-                price: 8
+                price: 8,
+                id: 3
             }
         ]
+    }
+
+    prevProductId = 3
+
+    handleAddProduct = (name, count, price) => {
+        this.setState( prevState => {
+            return {
+                products: [
+                    ...prevState.products,
+                    {
+                        name,
+                        count,
+                        price,
+                        id: this.prevProductId +=1
+                    }
+                ]
+            }
+        })
     }
 
     render() {
@@ -31,7 +52,7 @@ class App extends Component {
                 <Header />
                 <ProductList products={this.state.products} />
                 <Footer />
-                <AddProductForm />
+                <AddProductForm addProduct={this.handleAddProduct}/>
             </div>
         )
     }

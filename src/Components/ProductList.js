@@ -9,6 +9,7 @@ const ProductList = (props) => {
                     name={p.name}
                     count={p.count}
                     price={p.price}
+                    key={p.id.toString()}
                 />
             )}
         </React.Fragment>
